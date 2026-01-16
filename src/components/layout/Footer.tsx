@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { CONTACT_INFO, NAV_LINKS } from '../../lib/constants'
 
 export function Footer() {
@@ -10,11 +11,13 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 mb-10 md:mb-12">
           {/* Logo + Tagline */}
           <div>
-            <img
-              src="/Logos/ascent-logo-vertical-white.png"
-              alt="Ascent Real Estate"
-              className="h-28 md:h-32 mb-4"
-            />
+            <Link to="/">
+              <img
+                src="/Logos/ascent-logo-vertical-white.png"
+                alt="Ascent Real Estate"
+                className="h-28 md:h-32 mb-4"
+              />
+            </Link>
             <p className="text-sm text-neutral-400 leading-relaxed">
               Strategic real estate for owners, operators, and investors.
             </p>
@@ -27,13 +30,13 @@ export function Footer() {
             </h4>
             <nav className="space-y-2" aria-label="Footer navigation">
               {NAV_LINKS.map((link) => (
-                <a
+                <Link
                   key={link.href}
-                  href={link.href}
+                  to={link.href}
                   className="block text-sm hover:text-white transition-colors"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </nav>
           </div>

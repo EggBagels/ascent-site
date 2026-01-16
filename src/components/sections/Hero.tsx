@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useReducedMotion } from '../../hooks/useReducedMotion'
 
@@ -78,18 +79,18 @@ export function Hero() {
           className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start sm:items-center"
           variants={!reducedMotion ? itemVariants : undefined}
         >
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="bg-white text-neutral-900 px-8 md:px-10 py-4 md:py-5 text-sm font-semibold tracking-wide hover:bg-neutral-100 transition-colors duration-300"
           >
             Let's Connect
-          </a>
-          <a
-            href="#services"
+          </Link>
+          <Link
+            to="/services"
             className="border-2 border-white/60 text-white px-8 md:px-10 py-4 md:py-5 text-sm font-semibold tracking-wide hover:bg-white hover:text-neutral-900 transition-all duration-300"
           >
             View Services
-          </a>
+          </Link>
         </motion.div>
 
         {/* Helper text */}

@@ -1,9 +1,9 @@
 import { Shield, Target, Compass, type LucideIcon } from 'lucide-react'
 
 export const NAV_LINKS = [
-  { href: '#about', label: 'About' },
-  { href: '#services', label: 'Services' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/about', label: 'About' },
+  { href: '/services', label: 'Services' },
+  { href: '/contact', label: 'Contact' },
 ] as const
 
 export interface ServiceItem {

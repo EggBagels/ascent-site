@@ -1,3 +1,4 @@
+import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X } from 'lucide-react'
 import { NAV_LINKS } from '../../lib/constants'
@@ -8,6 +9,8 @@ interface MobileMenuProps {
 }
 
 export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
+  const location = useLocation()
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -47,26 +50,30 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               {/* Nav links */}
               <div className="flex flex-col gap-2 px-6">
                 {NAV_LINKS.map((link) => (
-                  <a
+                  <Link
                     key={link.href}
-                    href={link.href}
+                    to={link.href}
                     onClick={onClose}
-                    className="text-lg text-white py-3 border-b border-neutral-800 hover:text-neutral-300 transition-colors"
+                    className={`text-lg py-3 border-b border-neutral-800 transition-colors ${
+                      location.pathname === link.href
+                        ? 'text-white'
+                        : 'text-neutral-300 hover:text-white'
+                    }`}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 ))}
               </div>
 
               {/* Contact CTA */}
               <div className="mt-auto p-6">
-                <a
-                  href="#contact"
+                <Link
+                  to="/contact"
                   onClick={onClose}
                   className="block w-full bg-white text-neutral-900 text-center py-4 text-sm font-semibold tracking-wide hover:bg-neutral-100 transition-colors"
                 >
                   Let's Connect
-                </a>
+                </Link>
               </div>
             </div>
           </motion.nav>

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Menu } from 'lucide-react'
 import { NAV_LINKS } from '../../lib/constants'
@@ -7,6 +8,7 @@ import { MobileMenu } from '../ui/MobileMenu'
 export function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,25 +46,33 @@ export function Header() {
       >
         <div className="h-full flex items-center justify-between">
           {/* Logo */}
-          <a href="#hero" className="flex items-center pl-6 md:pl-20">
+          <Link to="/" className="flex items-center pl-6 md:pl-20">
             <img
               src="/Logos/ascent-logo-horizontal-white.png"
               alt="Ascent Real Estate"
               className="w-48 h-auto"
             />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8 pr-20" aria-label="Main navigation">
             {NAV_LINKS.map((link) => (
-              <a
+              <Link
                 key={link.href}
-                href={link.href}
-                className="text-sm text-white uppercase tracking-wide hover:text-neutral-300 transition-colors relative group"
+                to={link.href}
+                className={`text-sm uppercase tracking-wide transition-colors relative group ${
+                  location.pathname === link.href
+                    ? 'text-white'
+                    : 'text-neutral-300 hover:text-white'
+                }`}
               >
                 {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-px bg-white group-hover:w-full transition-all duration-300" />
-              </a>
+                <span
+                  className={`absolute -bottom-1 left-0 h-px bg-white transition-all duration-300 ${
+                    location.pathname === link.href ? 'w-full' : 'w-0 group-hover:w-full'
+                  }`}
+                />
+              </Link>
             ))}
           </nav>
 

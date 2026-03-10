@@ -1,4 +1,3 @@
-import { User } from 'lucide-react'
 import { Reveal } from '../ui/Reveal'
 import { SectionLabel } from '../ui/SectionLabel'
 import { CONTACT_INFO } from '../../lib/constants'
@@ -31,27 +30,25 @@ export function About() {
             <div className="space-y-6 text-neutral-200 text-base md:text-lg leading-relaxed">
               <p>
                 James Timberlake is the principal and managing broker of Ascent
-                Real Estate, a commercial firm dedicated to helping clients
-                achieve their investing goals by providing disproportionate value
-                at every stage of the ownership cycle.
+                Real Estate. He started the firm because he wanted to build a
+                brokerage that actually invests alongside its clients.
               </p>
               <p>
-                With deep expertise in the industrial sector, James advises
-                owners, operators, and investors on how to unlock operational
-                efficiencies, optimize site selection, and position industrial
-                assets for long-term performance in a rapidly evolving market.
+                His focus is industrial real estate: warehouses, distribution
+                centers, manufacturing facilities. He helps owners and investors
+                find the right sites, negotiate better deals, and run their
+                properties more efficiently.
               </p>
               <p>
-                Prior to founding Ascent, James served as the Director of the
-                Oklahoma State Parks Department, where he oversaw more than $1
-                billion in statewide assets and led large-scale capital
-                improvement, maintenance, and operational initiatives. This
-                experience managing complex, high-value infrastructure informs
-                his disciplined approach to industrial real estate today.
+                Before Ascent, James was the Director of the Oklahoma State Parks
+                Department, where he managed more than $1 billion in public
+                assets. Running capital projects and maintenance budgets at that
+                scale is where he learned to think like an operator.
               </p>
               <p>
                 James and his wife Anna live near Harrah, OK with their four
-                children—Lily, Eva, John, and Mae.
+                children: Lily, Eva, John, and Mae. They enjoy spending time
+                outdoors, going on bike rides, and working on their ranch.
               </p>
 
               {/* Credentials Box */}
@@ -83,15 +80,13 @@ export function About() {
           {/* Right: Photo Placeholder */}
           <Reveal delay={0.2}>
             <div className="relative">
-              <div className="aspect-[4/5] bg-gradient-to-br from-neutral-700 to-neutral-800 rounded-sm flex items-center justify-center">
-                <div className="text-center">
-                  <User className="w-20 h-20 md:w-24 md:h-24 text-neutral-500 mx-auto mb-4" />
-                  <p className="text-neutral-400 text-sm">
-                    Professional photo
-                    <br />
-                    to be provided
-                  </p>
-                </div>
+              <div className="aspect-[4/5] rounded-sm overflow-hidden">
+                <img
+                  src="/images/james-timberlake.jpg"
+                  alt="James Timberlake, Principal & Managing Broker at Ascent Real Estate"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
               </div>
               {/* Decorative element */}
               <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 w-full h-full border border-white/10 rounded-sm -z-10" />

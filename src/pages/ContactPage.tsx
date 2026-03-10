@@ -1,15 +1,47 @@
+import { useState, FormEvent } from 'react'
 import { Linkedin, MapPin, Phone, Mail, Clock } from 'lucide-react'
 import { PageHeader } from '../components/ui/PageHeader'
 import { Reveal } from '../components/ui/Reveal'
 import { CONTACT_INFO } from '../lib/constants'
 
+type SubmitStatus = 'idle' | 'submitting' | 'success' | 'error'
+
 export function ContactPage() {
+  const [submitStatus, setSubmitStatus] = useState<SubmitStatus>('idle')
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setSubmitStatus('submitting')
+
+    const formData = new FormData(e.currentTarget)
+    formData.append('access_key', import.meta.env.VITE_WEB3FORMS_KEY)
+    formData.append('subject', 'New Contact from Ascent Real Estate Website')
+    formData.append('from_name', 'Ascent Website')
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData,
+      })
+      const result = await response.json()
+
+      if (result.success) {
+        setSubmitStatus('success')
+        e.currentTarget.reset()
+      } else {
+        setSubmitStatus('error')
+      }
+    } catch {
+      setSubmitStatus('error')
+    }
+  }
+
   return (
     <>
       <PageHeader
         title="Contact Us"
         subtitle="Get in Touch"
-        description="Ready to start your ascent? Reach out to discuss your project. We respond to all inquiries within 24 hours."
+        description="Give us a call or send a message. We get back to everyone within 24 hours."
       />
 
       {/* Contact Section */}
@@ -21,7 +53,7 @@ export function ContactPage() {
               <div className="space-y-8">
                 <div>
                   <h2 className="text-2xl md:text-3xl font-serif font-medium text-neutral-900 mb-8">
-                    Let's Connect
+                    Get in Touch
                   </h2>
 
                   <div className="space-y-6">
@@ -123,107 +155,135 @@ export function ContactPage() {
             {/* Right: Contact Form (Dummy) */}
             <Reveal delay={0.2}>
               <div className="bg-white p-8 md:p-10 border border-neutral-200 rounded-sm">
-                <h3 className="text-xl font-serif font-medium text-neutral-900 mb-6">
-                  Send a Message
-                </h3>
-
-                <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="block text-sm font-medium text-neutral-700 mb-2"
+                {submitStatus === 'success' ? (
+                  <div className="p-8 bg-green-50 border border-green-200 rounded-sm text-center">
+                    <h3 className="text-xl font-medium text-green-800 mb-2">
+                      Message Sent!
+                    </h3>
+                    <p className="text-green-700">
+                      Thank you for reaching out. We'll be in touch within 24 hours.
+                    </p>
+                    <button
+                      onClick={() => setSubmitStatus('idle')}
+                      className="mt-4 text-green-700 underline hover:text-green-800"
                     >
-                      Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      placeholder="Your name"
-                      className="w-full px-4 py-3 border border-neutral-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-ascent-navy focus:border-transparent"
-                    />
+                      Send another message
+                    </button>
                   </div>
+                ) : (
+                  <>
+                    <h3 className="text-xl font-serif font-medium text-neutral-900 mb-6">
+                      Send a Message
+                    </h3>
 
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium text-neutral-700 mb-2"
-                    >
-                      Email *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      placeholder="your@email.com"
-                      className="w-full px-4 py-3 border border-neutral-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-ascent-navy focus:border-transparent"
-                    />
-                  </div>
+                    <form className="space-y-6" onSubmit={handleSubmit}>
+                      <div>
+                        <label
+                          htmlFor="name"
+                          className="block text-sm font-medium text-neutral-700 mb-2"
+                        >
+                          Name *
+                        </label>
+                        <input
+                          type="text"
+                          id="name"
+                          name="name"
+                          required
+                          aria-required="true"
+                          placeholder="Your name"
+                          className="w-full px-4 py-3 border border-neutral-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-ascent-navy focus:border-transparent"
+                        />
+                      </div>
 
-                  <div>
-                    <label
-                      htmlFor="phone"
-                      className="block text-sm font-medium text-neutral-700 mb-2"
-                    >
-                      Phone
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      placeholder="(555) 555-5555"
-                      className="w-full px-4 py-3 border border-neutral-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-ascent-navy focus:border-transparent"
-                    />
-                  </div>
+                      <div>
+                        <label
+                          htmlFor="email"
+                          className="block text-sm font-medium text-neutral-700 mb-2"
+                        >
+                          Email *
+                        </label>
+                        <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          required
+                          aria-required="true"
+                          placeholder="your@email.com"
+                          className="w-full px-4 py-3 border border-neutral-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-ascent-navy focus:border-transparent"
+                        />
+                      </div>
 
-                  <div>
-                    <label
-                      htmlFor="subject"
-                      className="block text-sm font-medium text-neutral-700 mb-2"
-                    >
-                      Subject
-                    </label>
-                    <select
-                      id="subject"
-                      name="subject"
-                      className="w-full px-4 py-3 border border-neutral-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-ascent-navy focus:border-transparent bg-white"
-                    >
-                      <option value="">Select a topic</option>
-                      <option value="commercial">Commercial Real Estate</option>
-                      <option value="investment">Investment Properties</option>
-                      <option value="management">Property Management</option>
-                      <option value="residential">Residential</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
+                      <div>
+                        <label
+                          htmlFor="phone"
+                          className="block text-sm font-medium text-neutral-700 mb-2"
+                        >
+                          Phone
+                        </label>
+                        <input
+                          type="tel"
+                          id="phone"
+                          name="phone"
+                          placeholder="(555) 555-5555"
+                          className="w-full px-4 py-3 border border-neutral-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-ascent-navy focus:border-transparent"
+                        />
+                      </div>
 
-                  <div>
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-medium text-neutral-700 mb-2"
-                    >
-                      Message *
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={5}
-                      placeholder="Tell us about your project or inquiry..."
-                      className="w-full px-4 py-3 border border-neutral-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-ascent-navy focus:border-transparent resize-none"
-                    />
-                  </div>
+                      <div>
+                        <label
+                          htmlFor="subject"
+                          className="block text-sm font-medium text-neutral-700 mb-2"
+                        >
+                          Subject
+                        </label>
+                        <select
+                          id="subject"
+                          name="subject"
+                          className="w-full px-4 py-3 border border-neutral-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-ascent-navy focus:border-transparent bg-white"
+                        >
+                          <option value="">Select a topic</option>
+                          <option value="commercial">Commercial Real Estate</option>
+                          <option value="investment">Investment Properties</option>
+                          <option value="management">Property Management</option>
+                          <option value="residential">Residential</option>
+                          <option value="other">Other</option>
+                        </select>
+                      </div>
 
-                  <button
-                    type="submit"
-                    className="w-full bg-ascent-navy text-white px-8 py-4 text-sm font-semibold tracking-wide hover:bg-ascent-navy-light transition-colors duration-300"
-                  >
-                    Send Message
-                  </button>
+                      <div>
+                        <label
+                          htmlFor="message"
+                          className="block text-sm font-medium text-neutral-700 mb-2"
+                        >
+                          Message *
+                        </label>
+                        <textarea
+                          id="message"
+                          name="message"
+                          rows={5}
+                          required
+                          aria-required="true"
+                          placeholder="Tell us about your project or inquiry..."
+                          className="w-full px-4 py-3 border border-neutral-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-ascent-navy focus:border-transparent resize-none"
+                        />
+                      </div>
 
-                  <p className="text-xs text-neutral-500 text-center">
-                    Form functionality coming soon. For immediate assistance, please call or email directly.
-                  </p>
-                </form>
+                      {submitStatus === 'error' && (
+                        <p className="text-red-600 text-sm" role="alert">
+                          Something went wrong. Please try again or contact us directly.
+                        </p>
+                      )}
+
+                      <button
+                        type="submit"
+                        disabled={submitStatus === 'submitting'}
+                        className="w-full bg-ascent-navy text-white px-8 py-4 text-sm font-semibold tracking-wide hover:bg-ascent-navy-light transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                      >
+                        {submitStatus === 'submitting' ? 'Sending...' : 'Send Message'}
+                      </button>
+                    </form>
+                  </>
+                )}
               </div>
             </Reveal>
           </div>

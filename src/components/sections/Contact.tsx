@@ -42,7 +42,7 @@ export function Contact() {
         {/* Section Header */}
         <Reveal>
           <div className="text-center mb-16 md:mb-20">
-            <SectionLabel elevation="Summit" title="Let's Connect" light />
+            <SectionLabel elevation="Summit" title="Contact" light />
             <h2 className="text-4xl md:text-5xl lg:text-7xl font-serif font-medium text-neutral-900 mb-6">
               Ready to Start Your Ascent?
             </h2>

@@ -25,7 +25,7 @@ export function Background({ reducedMotion }: BackgroundProps) {
       >
         {/* Mountain background image */}
         <img
-          src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=2400&q=80"
+          src="/images/mountain-hero.jpg"
           alt=""
           className="w-full h-full object-cover object-bottom"
           loading="eager"

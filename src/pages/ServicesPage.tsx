@@ -8,7 +8,7 @@ const SERVICES_EXPANDED = [
     route: '01',
     title: 'Commercial Real Estate',
     icon: Building2,
-    description: 'For operators seeking strategic industrial assets. Site selection, operational efficiency, and positioning for long-term performance in evolving markets.',
+    description: 'For operators who need the right industrial space. We handle site selection, lease strategy, and the operational details that affect your bottom line.',
     details: [
       'Site selection and acquisition strategy',
       'Market analysis and due diligence',
@@ -20,7 +20,7 @@ const SERVICES_EXPANDED = [
     route: '02',
     title: 'Investment Properties',
     icon: TrendingUp,
-    description: 'For investors building portfolios. Capital planning, market analysis, and asset strategy informed by firsthand investing experience.',
+    description: 'For investors who want a broker that thinks like an owner. We invest ourselves, so our advice comes from experience, not just comps.',
     details: [
       'Investment property identification and analysis',
       'Cap rate and cash flow modeling',
@@ -32,7 +32,7 @@ const SERVICES_EXPANDED = [
     route: '03',
     title: 'Property Management',
     icon: Settings,
-    description: 'For owners maximizing asset performance. Operational workflows, facility optimization, and cost-effective stewardship of high-value properties.',
+    description: 'For owners who want their properties run well without the headache. We handle day-to-day operations so you can focus on what comes next.',
     details: [
       'Operational efficiency assessments',
       'Vendor management and cost optimization',
@@ -44,7 +44,7 @@ const SERVICES_EXPANDED = [
     route: '04',
     title: 'Residential',
     icon: Home,
-    description: 'For clients referred by trusted partners. Relationship-focused service for residential transactions within our network.',
+    description: 'We take residential clients by referral. If someone we trust sends you our way, you get the same attention we give our commercial clients.',
     details: [
       'Buyer representation and consultation',
       'Seller listing and marketing services',
@@ -60,7 +60,7 @@ export function ServicesPage() {
       <PageHeader
         title="Our Services"
         subtitle="What We Do"
-        description="We guide clients through four core service areas, each designed to maximize value and minimize friction at every stage of the ownership cycle."
+        description="Four ways we work with clients. Whether you're buying, selling, investing, or need someone to manage what you own."
       />
 
       {/* Services Grid */}
@@ -122,8 +122,8 @@ export function ServicesPage() {
               Not Sure Where to Start?
             </h2>
             <p className="text-neutral-600 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
-              Every real estate journey is unique. Let's discuss your goals and determine
-              the best path forward together.
+              Tell us what you're working on and we'll figure out
+              the right way to help.
             </p>
             <Link
               to="/contact"

@@ -17,15 +17,15 @@ export function Credentials() {
           <div className="mb-16">
             <SectionLabel elevation="1500m" title="Credentials" />
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-medium tracking-tight text-white max-w-3xl leading-tight">
-              Built on Experience.
+              We've done the work
               <br />
-              <span className="text-neutral-500">Driven by Results.</span>
+              <span className="text-neutral-500">before we advise on it.</span>
             </h2>
             <p className="text-neutral-300 text-lg mt-6 max-w-2xl leading-relaxed">
-              Led by James Timberlake, former Director of the Oklahoma State
-              Parks Department, where he oversaw more than $1 billion in
-              statewide assets. Ascent brings a disciplined, investor-minded
-              approach to commercial real estate—because we are investors too.
+              James Timberlake ran the Oklahoma State Parks Department, where he
+              was responsible for more than $1 billion in public assets. He started
+              Ascent because he wanted to bring that same rigor to commercial
+              real estate, and to invest alongside his clients.
             </p>
           </div>
         </Reveal>

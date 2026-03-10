@@ -30,7 +30,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col justify-end pb-20 md:pb-32 px-6 md:px-20"
+      className="relative min-h-screen flex flex-col justify-end pt-28 md:pt-36 pb-20 md:pb-32 px-6 md:px-20"
     >
       {/* Section-specific overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/30 via-neutral-900/60 to-neutral-950/90 -z-10" />
@@ -69,9 +69,9 @@ export function Hero() {
           className="text-lg md:text-xl text-neutral-300 max-w-2xl font-light leading-relaxed border-l-2 border-white/20 pl-6 mb-12"
           variants={!reducedMotion ? itemVariants : undefined}
         >
-          Ascent Real Estate delivers disproportionate value at every stage of
-          the ownership cycle—from site selection and capital planning to
-          operational efficiency and long-term asset positioning.
+          Led by a former state parks director who managed $1B+ in public assets,
+          Ascent is a commercial real estate firm that invests alongside its clients.
+          We give you the same advice we'd take ourselves.
         </motion.p>
 
         {/* CTAs */}
@@ -83,7 +83,7 @@ export function Hero() {
             to="/contact"
             className="bg-white text-neutral-900 px-8 md:px-10 py-4 md:py-5 text-sm font-semibold tracking-wide hover:bg-neutral-100 transition-colors duration-300"
           >
-            Let's Connect
+            Schedule a Consultation
           </Link>
           <Link
             to="/services"
@@ -93,13 +93,6 @@ export function Hero() {
           </Link>
         </motion.div>
 
-        {/* Helper text */}
-        <motion.p
-          className="mt-12 text-neutral-400 text-sm"
-          variants={!reducedMotion ? itemVariants : undefined}
-        >
-          Serving Oklahoma and the Central United States
-        </motion.p>
       </MotionWrapper>
     </section>
   )

@@ -23,11 +23,11 @@ export function HomePage() {
             <div className="mb-12 md:mb-16 text-center">
               <SectionLabel elevation="3000m" title="Services" />
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-medium text-white mb-6">
-                Our Services
+                Pick Your Route
               </h2>
               <p className="text-neutral-300 text-lg max-w-2xl mx-auto leading-relaxed">
-                We guide clients through four core service areas, each designed to
-                maximize value and minimize friction.
+                Four ways we work with clients. Each one built around
+                how we'd want to be served if the roles were reversed.
               </p>
             </div>
           </Reveal>
@@ -78,14 +78,14 @@ export function HomePage() {
               Ready to Start Your Ascent?
             </h2>
             <p className="text-neutral-300 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
-              Whether you're acquiring, developing, or optimizing real estate assets,
-              we're here to help you reach the summit.
+              If you're looking at a deal, building a portfolio, or just want to
+              talk through your options, we're here.
             </p>
             <Link
               to="/contact"
               className="inline-block bg-white text-neutral-900 px-10 py-5 text-sm font-semibold tracking-wide hover:bg-neutral-100 transition-colors duration-300"
             >
-              Let's Connect
+              Join the Climb
             </Link>
           </Reveal>
         </div>

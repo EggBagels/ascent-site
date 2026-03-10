@@ -17,25 +17,25 @@ export const SERVICES: ServiceItem[] = [
   {
     route: '01',
     title: 'Commercial Real Estate',
-    description: 'For operators seeking strategic industrial assets. Site selection, operational efficiency, and positioning for long-term performance in evolving markets.',
+    description: 'For operators who need the right industrial space. We handle site selection, lease strategy, and the operational details that affect your bottom line.',
     linkText: 'Explore Commercial',
   },
   {
     route: '02',
     title: 'Investment Properties',
-    description: 'For investors building portfolios. Capital planning, market analysis, and asset strategy informed by firsthand investing experience.',
+    description: 'For investors who want a broker that thinks like an owner. We invest ourselves, so our advice comes from experience, not just comps.',
     linkText: 'Explore Investment',
   },
   {
     route: '03',
     title: 'Property Management',
-    description: 'For owners maximizing asset performance. Operational workflows, facility optimization, and cost-effective stewardship of high-value properties.',
+    description: 'For owners who want their properties run well without the headache. We handle day-to-day operations so you can focus on what comes next.',
     linkText: 'Explore Management',
   },
   {
     route: '04',
     title: 'Residential',
-    description: 'For clients referred by trusted partners. Relationship-focused service for residential transactions within our network.',
+    description: 'We take residential clients by referral. If someone we trust sends you our way, you get the same attention we give our commercial clients.',
     linkText: 'Explore Residential',
   },
 ]
@@ -50,7 +50,7 @@ export const CREDENTIALS: CredentialItem[] = [
   {
     icon: Shield,
     value: '10+ Years',
-    description: 'Licensed Broker & Sales Professional serving commercial and investment clients',
+    description: 'Licensed broker working with commercial and investment clients across Oklahoma',
   },
   {
     icon: Target,

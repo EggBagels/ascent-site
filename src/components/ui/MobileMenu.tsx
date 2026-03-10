@@ -72,7 +72,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   onClick={onClose}
                   className="block w-full bg-white text-neutral-900 text-center py-4 text-sm font-semibold tracking-wide hover:bg-neutral-100 transition-colors"
                 >
-                  Let's Connect
+                  Schedule a Consultation
                 </Link>
               </div>
             </div>

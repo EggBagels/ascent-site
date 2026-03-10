@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { Reveal } from '../ui/Reveal'
 import { SectionLabel } from '../ui/SectionLabel'
@@ -21,8 +22,8 @@ export function Services() {
               Pick Your Route
             </h2>
             <p className="text-neutral-300 text-lg max-w-2xl mx-auto leading-relaxed">
-              We guide clients through four core service areas, each designed to
-              maximize value and minimize friction.
+              Four ways we work with clients. Each one built around
+              how we'd want to be served if the roles were reversed.
             </p>
           </div>
         </Reveal>
@@ -41,13 +42,13 @@ export function Services() {
                 <p className="text-neutral-400 text-base leading-relaxed mb-6">
                   {service.description}
                 </p>
-                <a
-                  href="#contact"
+                <Link
+                  to="/contact"
                   className="inline-flex items-center gap-2 text-white text-sm font-medium group-hover:gap-3 transition-all"
                 >
                   {service.linkText}
                   <ArrowRight className="w-4 h-4" />
-                </a>
+                </Link>
               </article>
             </Reveal>
           ))}

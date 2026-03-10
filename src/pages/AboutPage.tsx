@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { User, Target, Shield, Compass } from 'lucide-react'
+import { Target, Shield, Compass } from 'lucide-react'
 import { PageHeader } from '../components/ui/PageHeader'
 import { Reveal } from '../components/ui/Reveal'
 import { CONTACT_INFO } from '../lib/constants'
@@ -7,18 +7,18 @@ import { CONTACT_INFO } from '../lib/constants'
 const VALUES = [
   {
     icon: Target,
-    title: 'Results-Driven',
-    description: 'We measure our success by your outcomes. Every recommendation is designed to maximize value and minimize friction.',
+    title: 'We Are Investors Too',
+    description: 'We own property ourselves. When we advise on a deal, we\'re drawing from our own experience as investors, not just market data.',
   },
   {
     icon: Shield,
-    title: 'Integrity First',
-    description: 'Transparency and honesty guide every interaction. We build relationships on trust, not transactions.',
+    title: '$1B+ in Assets Managed',
+    description: 'Before starting Ascent, James ran the Oklahoma State Parks Department. He was responsible for $1B+ in public assets, maintenance budgets, and capital projects across the state.',
   },
   {
     icon: Compass,
-    title: 'Strategic Vision',
-    description: 'We look beyond the immediate deal to position assets for long-term performance in evolving markets.',
+    title: 'Industrial Sector Expertise',
+    description: 'Industrial is where we go deep. Warehouses, distribution, manufacturing. We know what makes these assets work and what kills returns.',
   },
 ]
 
@@ -28,7 +28,7 @@ export function AboutPage() {
       <PageHeader
         title="About Ascent"
         subtitle="Our Story"
-        description="A commercial real estate firm dedicated to helping clients achieve their investing goals by providing disproportionate value at every stage of the ownership cycle."
+        description="A commercial real estate firm built by investors, for investors. We put our own money where our advice is."
       />
 
       {/* Mission Section */}
@@ -44,22 +44,22 @@ export function AboutPage() {
                   Our Mission
                 </p>
                 <h2 className="text-3xl md:text-4xl font-serif font-medium text-white mb-6 leading-tight">
-                  Elevating Real Estate Investment
+                  Why we started Ascent
                 </h2>
                 <div className="space-y-4 text-neutral-300 text-base md:text-lg leading-relaxed">
                   <p>
-                    Ascent Real Estate was founded on a simple principle: real estate professionals
-                    should deliver more than just access to listings. We deliver strategic insight,
-                    operational expertise, and a disciplined approach to building lasting value.
+                    Most brokers sell you a deal. We wanted to build something different.
+                    Ascent exists because we believe the best advice comes from people who
+                    have skin in the game, not just a commission on the line.
                   </p>
                   <p>
-                    Our name reflects our philosophy. Like ascending a mountain, building a successful
-                    real estate portfolio requires careful planning, strategic decisions at every
-                    elevation, and the right guide to reach the summit.
+                    We're named after what we do. Building a real estate portfolio is a
+                    climb, and having someone beside you who's made the trip before
+                    changes how you make decisions along the way.
                   </p>
                   <p>
-                    We are investors too. This firsthand experience shapes our advice and ensures our
-                    interests are aligned with yours.
+                    We invest our own capital. That's not a tagline. It means when we
+                    advise you, we're thinking the way you think.
                   </p>
                 </div>
               </div>
@@ -67,11 +67,14 @@ export function AboutPage() {
 
             <Reveal delay={0.2}>
               <div className="relative">
-                <div className="aspect-video bg-gradient-to-br from-neutral-700 to-neutral-800 rounded-sm flex items-center justify-center">
-                  <p className="text-neutral-400 text-sm text-center px-8">
-                    Company imagery or video<br />to be provided
-                  </p>
-                </div>
+                <div className="aspect-video rounded-sm overflow-hidden">
+                <img
+                  src="/images/mountain-hero.jpg"
+                  alt="Mountain landscape representing Ascent Real Estate's strategic approach"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
                 <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 w-full h-full border border-white/10 rounded-sm -z-10" />
               </div>
             </Reveal>
@@ -88,10 +91,10 @@ export function AboutPage() {
           <Reveal>
             <div className="text-center mb-12 md:mb-16">
               <p className="text-xs font-mono uppercase tracking-widest text-neutral-400 mb-4">
-                Our Approach
+                Why Ascent
               </p>
               <h2 className="text-3xl md:text-4xl font-serif font-medium text-white">
-                What Guides Us
+                How we work
               </h2>
             </div>
           </Reveal>
@@ -139,25 +142,25 @@ export function AboutPage() {
               <div className="space-y-6 text-neutral-200 text-base md:text-lg leading-relaxed">
                 <p>
                   James Timberlake is the principal and managing broker of Ascent
-                  Real Estate, a commercial firm dedicated to helping clients
-                  achieve their investing goals by providing disproportionate value
-                  at every stage of the ownership cycle.
+                  Real Estate. He started the firm because he wanted to build a
+                  brokerage that actually invests alongside its clients.
                 </p>
                 <p>
-                  With deep expertise in the industrial sector, James advises
-                  owners, operators, and investors on how to unlock operational
-                  efficiencies, optimize site selection, and position industrial
-                  assets for long-term performance in a rapidly evolving market.
+                  His focus is industrial real estate: warehouses, distribution
+                  centers, manufacturing facilities. He helps owners and investors
+                  find the right sites, negotiate better deals, and run their
+                  properties more efficiently.
                 </p>
                 <p>
-                  Prior to founding Ascent, James served as the Director of the
-                  Oklahoma State Parks Department, where he oversaw more than $1
-                  billion in statewide assets and led large-scale capital
-                  improvement, maintenance, and operational initiatives.
+                  Before Ascent, James was the Director of the Oklahoma State Parks
+                  Department, where he managed more than $1 billion in public
+                  assets. Running capital projects and maintenance budgets at that
+                  scale is where he learned to think like an operator.
                 </p>
                 <p>
                   James and his wife Anna live near Harrah, OK with their four
-                  children—Lily, Eva, John, and Mae.
+                  children: Lily, Eva, John, and Mae. They enjoy spending time
+                  outdoors, going on bike rides, and working on their ranch.
                 </p>
 
                 {/* Credentials Box */}
@@ -188,16 +191,14 @@ export function AboutPage() {
 
             <Reveal delay={0.2}>
               <div className="relative">
-                <div className="aspect-[4/5] bg-gradient-to-br from-neutral-700 to-neutral-800 rounded-sm flex items-center justify-center">
-                  <div className="text-center">
-                    <User className="w-20 h-20 md:w-24 md:h-24 text-neutral-500 mx-auto mb-4" />
-                    <p className="text-neutral-400 text-sm">
-                      Professional photo
-                      <br />
-                      to be provided
-                    </p>
-                  </div>
-                </div>
+                <div className="aspect-[4/5] rounded-sm overflow-hidden">
+                <img
+                  src="/images/james-timberlake.jpg"
+                  alt="James Timberlake, Principal & Managing Broker at Ascent Real Estate"
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
                 <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 w-full h-full border border-white/10 rounded-sm -z-10" />
               </div>
             </Reveal>
@@ -213,14 +214,14 @@ export function AboutPage() {
               Let's Work Together
             </h2>
             <p className="text-neutral-600 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
-              Ready to discuss your real estate goals? We'd love to hear from you
-              and explore how we can help.
+              Have a deal you're looking at, or just want to talk through your
+              options? Give us a call or drop a note.
             </p>
             <Link
               to="/contact"
               className="inline-block bg-ascent-navy text-white px-10 py-5 text-sm font-semibold tracking-wide hover:bg-ascent-navy-light transition-colors duration-300"
             >
-              Get in Touch
+              Schedule a Consultation
             </Link>
           </Reveal>
         </div>

@@ -1,7 +1,26 @@
 import { Link } from 'react-router-dom'
+import { Target, Shield, Compass } from 'lucide-react'
 import { PageHeader } from '../components/ui/PageHeader'
 import { Reveal } from '../components/ui/Reveal'
-import { CONTACT_INFO, CORE_VALUES } from '../lib/constants'
+import { CONTACT_INFO } from '../lib/constants'
+
+const VALUES = [
+  {
+    icon: Target,
+    title: 'We Are Investors Too',
+    description: 'We own property ourselves. When we advise on a deal, we\'re drawing from our own experience as investors, not just market data.',
+  },
+  {
+    icon: Shield,
+    title: '$1B+ in Assets Managed',
+    description: 'Before starting Ascent, James ran the Oklahoma State Parks Department. He was responsible for $1B+ in public assets, maintenance budgets, and capital projects across the state.',
+  },
+  {
+    icon: Compass,
+    title: 'Industrial Sector Expertise',
+    description: 'Industrial is where we go deep. Warehouses, distribution, manufacturing. We know what makes these assets work and what kills returns.',
+  },
+]
 
 export function AboutPage() {
   return (
@@ -72,16 +91,16 @@ export function AboutPage() {
           <Reveal>
             <div className="text-center mb-12 md:mb-16">
               <p className="text-xs font-mono uppercase tracking-widest text-neutral-400 mb-4">
-                Our Values
+                Why Ascent
               </p>
               <h2 className="text-3xl md:text-4xl font-serif font-medium text-white">
-                What we stand on
+                How we work
               </h2>
             </div>
           </Reveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-            {CORE_VALUES.map((value, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            {VALUES.map((value, index) => (
               <Reveal key={value.title} delay={index * 0.1}>
                 <div className="p-8 border border-white/10 bg-white/5 hover:bg-white/10 transition-colors duration-300 h-full">
                   <div className="w-12 h-12 mb-6 text-white opacity-80">
@@ -122,20 +141,21 @@ export function AboutPage() {
             <Reveal>
               <div className="space-y-6 text-neutral-200 text-base md:text-lg leading-relaxed">
                 <p>
-                  James Timberlake is a broker and asset manager with hands-on
-                  experience running complex, high-value properties. He previously
-                  managed more than $1 billion in Oklahoma real estate assets, leading capital
-                  improvements, maintenance programs, and day-to-day operations.
-                </p>
-                <p>
-                  He started Ascent because he wanted to bring that same rigor to
-                  commercial real estate, and to invest alongside his clients.
+                  James Timberlake is the principal and managing broker of Ascent
+                  Real Estate. He started the firm because he wanted to build a
+                  brokerage that actually invests alongside its clients.
                 </p>
                 <p>
                   His focus is industrial real estate: warehouses, distribution
                   centers, manufacturing facilities. He helps owners and investors
                   find the right sites, negotiate better deals, and run their
                   properties more efficiently.
+                </p>
+                <p>
+                  Before Ascent, James was the Director of the Oklahoma State Parks
+                  Department, where he managed more than $1 billion in public
+                  assets. Running capital projects and maintenance budgets at that
+                  scale is where he learned to think like an operator.
                 </p>
                 <p>
                   James and his wife Anna live near Harrah, OK with their four

@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { Hero } from '../components/sections/Hero'
 import { Credentials } from '../components/sections/Credentials'
-import { Testimonials } from '../components/sections/Testimonials'
 import { Reveal } from '../components/ui/Reveal'
 import { SectionLabel } from '../components/ui/SectionLabel'
 import { SERVICES } from '../lib/constants'
@@ -12,7 +11,6 @@ export function HomePage() {
     <>
       <Hero />
       <Credentials />
-      <Testimonials />
 
       {/* Simplified Services Preview */}
       <section className="relative py-20 md:py-32 px-6 md:px-20">

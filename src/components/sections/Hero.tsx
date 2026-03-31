@@ -59,9 +59,9 @@ export function Hero() {
           className="text-5xl md:text-7xl lg:text-8xl font-serif font-semibold tracking-tight text-white mb-8 leading-[0.95]"
           variants={!reducedMotion ? itemVariants : undefined}
         >
-          Strategic Real Estate
+          We Invest Alongside
           <br />
-          <span className="text-neutral-400">for Serious Investors</span>
+          <span className="text-neutral-400">Our Clients</span>
         </motion.h1>
 
         {/* Subheadline */}
@@ -69,9 +69,9 @@ export function Hero() {
           className="text-lg md:text-xl text-neutral-300 max-w-2xl font-light leading-relaxed border-l-2 border-white/20 pl-6 mb-12"
           variants={!reducedMotion ? itemVariants : undefined}
         >
-          Led by a former state parks director who managed $1B+ in public assets,
-          Ascent is a commercial real estate firm that invests alongside its clients.
-          We give you the same advice we'd take ourselves.
+          With experience managing $1B+ in assets, Ascent is a commercial real
+          estate firm that puts its own money where its advice is. We give you
+          the same advice we'd take ourselves.
         </motion.p>
 
         {/* CTAs */}

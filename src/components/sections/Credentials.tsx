@@ -22,10 +22,10 @@ export function Credentials() {
               <span className="text-neutral-500">before we advise on it.</span>
             </h2>
             <p className="text-neutral-300 text-lg mt-6 max-w-2xl leading-relaxed">
-              James Timberlake ran the Oklahoma State Parks Department, where he
-              was responsible for more than $1 billion in public assets. He started
-              Ascent because he wanted to bring that same rigor to commercial
-              real estate, and to invest alongside his clients.
+              James Timberlake has managed more than $1 billion in Oklahoma
+              real estate assets, leading capital improvements, maintenance
+              programs, and day-to-day operations. He started Ascent to bring
+              that same rigor to his clients, and to invest alongside them.
             </p>
           </div>
         </Reveal>

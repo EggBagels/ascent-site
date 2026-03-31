@@ -29,21 +29,21 @@ export function About() {
           <Reveal>
             <div className="space-y-6 text-neutral-200 text-base md:text-lg leading-relaxed">
               <p>
-                James Timberlake is the principal and managing broker of Ascent
-                Real Estate. He started the firm because he wanted to build a
-                brokerage that actually invests alongside its clients.
+                James Timberlake is a broker and asset manager with hands-on
+                experience running complex, high-value properties. He has
+                managed more than $1 billion in Oklahoma real estate assets,
+                leading capital improvements, maintenance programs, and
+                day-to-day operations.
+              </p>
+              <p>
+                He started Ascent because he wanted to bring that same rigor to
+                commercial real estate, and to invest alongside his clients.
               </p>
               <p>
                 His focus is industrial real estate: warehouses, distribution
                 centers, manufacturing facilities. He helps owners and investors
                 find the right sites, negotiate better deals, and run their
                 properties more efficiently.
-              </p>
-              <p>
-                Before Ascent, James was the Director of the Oklahoma State Parks
-                Department, where he managed more than $1 billion in public
-                assets. Running capital projects and maintenance budgets at that
-                scale is where he learned to think like an operator.
               </p>
               <p>
                 James and his wife Anna live near Harrah, OK with their four

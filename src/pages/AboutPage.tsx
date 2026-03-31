@@ -1,24 +1,29 @@
 import { Link } from 'react-router-dom'
-import { Target, Shield, Compass } from 'lucide-react'
+import { Target, Shield, Compass, Anchor } from 'lucide-react'
 import { PageHeader } from '../components/ui/PageHeader'
 import { Reveal } from '../components/ui/Reveal'
 import { CONTACT_INFO } from '../lib/constants'
 
 const VALUES = [
   {
-    icon: Target,
-    title: 'We Are Investors Too',
-    description: 'We own property ourselves. When we advise on a deal, we\'re drawing from our own experience as investors, not just market data.',
+    icon: Shield,
+    title: 'Discipline',
+    description: 'Discipline is the foundation of consistent performance. We approach every asset and every decision with a steady, methodical mindset, grounded in data, clear processes, and long-term thinking. From underwriting to operations, we evaluate opportunities thoroughly, manage risks proactively, and create value intentionally over time.',
   },
   {
-    icon: Shield,
-    title: '$1B+ in Assets Managed',
-    description: 'Before starting Ascent, James ran the Oklahoma State Parks Department. He was responsible for $1B+ in public assets, maintenance budgets, and capital projects across the state.',
+    icon: Target,
+    title: 'Integrity',
+    description: 'Integrity is central to how we do business and build lasting relationships. We operate with transparency, follow through on our commitments, and prioritize doing what is right, even when it is not the easiest path. Our clients trust us to steward their investments with honesty and accountability, and we take that responsibility seriously.',
+  },
+  {
+    icon: Anchor,
+    title: 'Stewardship',
+    description: 'We treat every asset as if it were our own. Stewardship means taking a long-term, ownership-driven approach to every decision, prioritizing durability, performance, and responsible management over short-term gains. We are intentional with resources, proactive in operations, and focused on creating lasting value for our clients, tenants, and communities.',
   },
   {
     icon: Compass,
-    title: 'Industrial Sector Expertise',
-    description: 'Industrial is where we go deep. Warehouses, distribution, manufacturing. We know what makes these assets work and what kills returns.',
+    title: 'Value Creation',
+    description: 'We focus on delivering disproportionate value through every phase of the investment lifecycle. This means identifying opportunities others overlook, executing with precision, and continuously improving asset performance through thoughtful management and strategic decision-making. Our goal is not just to participate in the market, but to outperform it, creating meaningful, measurable results for our clients.',
   },
 ]
 
@@ -68,13 +73,12 @@ export function AboutPage() {
             <Reveal delay={0.2}>
               <div className="relative">
                 <div className="aspect-video rounded-sm overflow-hidden">
-                <img
-                  src="/images/mountain-hero.jpg"
-                  alt="Mountain landscape representing Ascent Real Estate's strategic approach"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-              </div>
+                  <img
+                    src="/images/commercial-building.jpg"
+                    alt="Modern commercial office building"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 w-full h-full border border-white/10 rounded-sm -z-10" />
               </div>
             </Reveal>
@@ -91,15 +95,15 @@ export function AboutPage() {
           <Reveal>
             <div className="text-center mb-12 md:mb-16">
               <p className="text-xs font-mono uppercase tracking-widest text-neutral-400 mb-4">
-                Why Ascent
+                What We Believe
               </p>
               <h2 className="text-3xl md:text-4xl font-serif font-medium text-white">
-                How we work
+                Our Values
               </h2>
             </div>
           </Reveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {VALUES.map((value, index) => (
               <Reveal key={value.title} delay={index * 0.1}>
                 <div className="p-8 border border-white/10 bg-white/5 hover:bg-white/10 transition-colors duration-300 h-full">
@@ -141,21 +145,21 @@ export function AboutPage() {
             <Reveal>
               <div className="space-y-6 text-neutral-200 text-base md:text-lg leading-relaxed">
                 <p>
-                  James Timberlake is the principal and managing broker of Ascent
-                  Real Estate. He started the firm because he wanted to build a
-                  brokerage that actually invests alongside its clients.
+                  James Timberlake is a broker and asset manager with hands-on
+                  experience running complex, high-value properties. He has
+                  managed more than $1 billion in Oklahoma real estate assets,
+                  leading capital improvements, maintenance programs, and
+                  day-to-day operations.
+                </p>
+                <p>
+                  He started Ascent because he wanted to bring that same rigor to
+                  commercial real estate, and to invest alongside his clients.
                 </p>
                 <p>
                   His focus is industrial real estate: warehouses, distribution
                   centers, manufacturing facilities. He helps owners and investors
                   find the right sites, negotiate better deals, and run their
                   properties more efficiently.
-                </p>
-                <p>
-                  Before Ascent, James was the Director of the Oklahoma State Parks
-                  Department, where he managed more than $1 billion in public
-                  assets. Running capital projects and maintenance budgets at that
-                  scale is where he learned to think like an operator.
                 </p>
                 <p>
                   James and his wife Anna live near Harrah, OK with their four
@@ -192,13 +196,13 @@ export function AboutPage() {
             <Reveal delay={0.2}>
               <div className="relative">
                 <div className="aspect-[4/5] rounded-sm overflow-hidden">
-                <img
-                  src="/images/james-timberlake.jpg"
-                  alt="James Timberlake, Principal & Managing Broker at Ascent Real Estate"
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-              </div>
+                  <img
+                    src="/images/james-timberlake.jpg"
+                    alt="James Timberlake, Principal & Managing Broker at Ascent Real Estate"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
                 <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 w-full h-full border border-white/10 rounded-sm -z-10" />
               </div>
             </Reveal>

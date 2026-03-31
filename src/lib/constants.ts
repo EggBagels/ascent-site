@@ -55,7 +55,7 @@ export const CREDENTIALS: CredentialItem[] = [
   {
     icon: Target,
     value: '$1B+ Assets',
-    description: 'Managed in public service as Director of Oklahoma State Parks Department',
+    description: 'More than $1 billion in Oklahoma real estate assets managed',
   },
   {
     icon: Compass,

@@ -17,7 +17,7 @@ export const SERVICES: ServiceItem[] = [
   {
     route: '01',
     title: 'Commercial Real Estate',
-    description: 'For operators who need the right industrial space. We handle site selection, lease strategy, and the operational details that affect your bottom line.',
+    description: 'For operators who need the right space. We handle site selection, purchase or lease strategy, and the operational details that affect your bottom line.',
     linkText: 'Explore Commercial',
   },
   {
@@ -28,7 +28,7 @@ export const SERVICES: ServiceItem[] = [
   },
   {
     route: '03',
-    title: 'Property Management',
+    title: 'Property and Asset Management',
     description: 'For owners who want their properties run well without the headache. We handle day-to-day operations so you can focus on what comes next.',
     linkText: 'Explore Management',
   },
@@ -55,12 +55,12 @@ export const CREDENTIALS: CredentialItem[] = [
   {
     icon: Target,
     value: '$1B+ Assets',
-    description: 'More than $1 billion in Oklahoma real estate assets managed',
+    description: 'More than $1 billion in real estate assets managed',
   },
   {
     icon: Compass,
     value: 'Multi-State',
-    description: 'Oklahoma licensed with network across the Central United States',
+    description: 'Transaction experience across the Central and Southern United States',
   },
 ]
 

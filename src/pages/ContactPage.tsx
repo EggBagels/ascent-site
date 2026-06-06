@@ -138,16 +138,29 @@ export function ContactPage() {
                   </a>
                 </div>
 
-                {/* Map Placeholder */}
+                {/* Map */}
                 <div className="mt-8">
-                  <div className="aspect-video bg-neutral-200 rounded-sm flex items-center justify-center">
-                    <div className="text-center">
-                      <MapPin className="w-10 h-10 text-neutral-400 mx-auto mb-2" />
-                      <p className="text-neutral-500 text-sm">
-                        Map integration<br />coming soon
-                      </p>
-                    </div>
+                  <div className="aspect-video rounded-sm overflow-hidden border border-neutral-200">
+                    <iframe
+                      src="https://maps.google.com/maps?q=225+NW+59th+St+Oklahoma+City+OK+73118&z=15&output=embed"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0, filter: 'grayscale(20%) contrast(1.05)' }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="Ascent Real Estate — 225 NW 59th St, Oklahoma City"
+                    />
                   </div>
+                  <a
+                    href="https://maps.google.com/maps?q=225+NW+59th+St+Oklahoma+City+OK+73118"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 mt-3 text-xs text-neutral-500 hover:text-ascent-navy transition-colors duration-200"
+                  >
+                    <MapPin className="w-3.5 h-3.5" />
+                    Get Directions
+                  </a>
                 </div>
               </div>
             </Reveal>

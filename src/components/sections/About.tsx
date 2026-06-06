@@ -31,19 +31,21 @@ export function About() {
               <p>
                 James Timberlake is a broker and asset manager with hands-on
                 experience running complex, high-value properties. He has
-                managed more than $1 billion in Oklahoma real estate assets,
-                leading capital improvements, maintenance programs, and
-                day-to-day operations.
+                managed more than $1 billion in real estate assets, leading
+                investment strategies, capital improvements, maintenance
+                programs, and day-to-day operations.
               </p>
               <p>
                 He started Ascent because he wanted to bring that same rigor to
                 commercial real estate, and to invest alongside his clients.
               </p>
               <p>
-                His focus is industrial real estate: warehouses, distribution
-                centers, manufacturing facilities. He helps owners and investors
-                find the right sites, negotiate better deals, and run their
-                properties more efficiently.
+                His focus is high value commercial real estate, with experience
+                across industrial, multifamily, and office properties. From
+                warehouses and manufacturing facilities to apartment communities
+                and office buildings, he helps owners and investors identify
+                opportunities, negotiate strategic transactions, and create
+                long-term value through thoughtful asset and property management.
               </p>
               <p>
                 James and his wife Anna live near Harrah, OK with their four
@@ -79,7 +81,7 @@ export function About() {
 
           {/* Right: Photo Placeholder */}
           <Reveal delay={0.2}>
-            <div className="relative">
+            <div className="relative max-w-xs mx-auto">
               <div className="aspect-[4/5] rounded-sm overflow-hidden">
                 <img
                   src="/images/james-timberlake.jpg"
